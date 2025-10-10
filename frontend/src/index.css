@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+/* Global typography scales (kept minimal; Tailwind still manages most utilities) */
+:root {
+  --app-font-size: 16px;
+  --heading-1: 2.25rem; /* 36px */
+  --heading-2: 1.875rem; /* 30px */
+  --heading-3: 1.5rem; /* 24px */
+}
+
+html { font-size: var(--app-font-size); }
+
+h1 { font-size: var(--heading-1); line-height: 1.1; font-weight: 800; }
+h2 { font-size: var(--heading-2); line-height: 1.15; font-weight: 700; }
+h3 { font-size: var(--heading-3); line-height: 1.2; font-weight: 600; }
+
+p { margin-top: 0; margin-bottom: 1rem; }
+
+/* Reusable application container (use instead of repeating max-w classes) */
+.app-container { width: 100%; padding-left: 1rem; padding-right: 1rem; }
+@media (min-width: 640px) { .app-container { padding-left: 1.5rem; padding-right: 1.5rem; } }
+@media (min-width: 1024px) { .app-container { padding-left: 2rem; padding-right: 2rem; } }
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Ensure full-height layout for flex containers */
+html, body, #root {
+  height: 100%;
+}
+
+.leaflet-container {
+  height: 400px;
+  width: 100%;
+}
