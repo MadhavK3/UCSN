@@ -1,14 +1,15 @@
 import React from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { 
-  LayoutDashboard, 
-  BarChart3, 
-  Settings, 
+import {
+  LayoutDashboard,
+  BarChart3,
+  Settings,
   ChevronLeft,
   Map,
   Cpu,
-  AlertTriangle
+  AlertTriangle,
+  Stack
 } from 'lucide-react'
 
 interface SidebarProps {
@@ -21,6 +22,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
 
   const navItems = [
     { name: 'Overview', href: '/dashboard', icon: LayoutDashboard },
+    { name: 'Digital Twin', href: '/digital-twin', icon: Stack },
     { name: 'Heatmap', href: '/dashboard/heatmap', icon: Map },
     { name: 'Coastal Shield', href: '/dashboard/coastal', icon: BarChart3 },
     { name: 'Energy Grid', href: '/dashboard/energy', icon: Cpu },
@@ -63,11 +65,10 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
                 <Link
                   key={item.name}
                   to={item.href}
-                  className={`flex items-center rounded-lg px-3 py-2 text-sm font-medium transition-colors mb-1 ${
-                    isActive
-                      ? 'bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400'
-                      : 'text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700'
-                  }`}
+                  className={`flex items-center rounded-lg px-3 py-2 text-sm font-medium transition-colors mb-1 ${isActive
+                    ? 'bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400'
+                    : 'text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700'
+                    }`}
                 >
                   <Icon size={20} className="flex-shrink-0" />
                   {isOpen && <span className="ml-3">{item.name}</span>}
@@ -89,11 +90,10 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
               <Link
                 key={item.name}
                 to={item.href}
-                className={`flex flex-col items-center p-2 text-xs ${
-                  isActive
-                    ? 'text-blue-600 dark:text-blue-400'
-                    : 'text-gray-600 dark:text-gray-400'
-                }`}
+                className={`flex flex-col items-center p-2 text-xs ${isActive
+                  ? 'text-blue-600 dark:text-blue-400'
+                  : 'text-gray-600 dark:text-gray-400'
+                  }`}
               >
                 <Icon size={20} />
                 <span className="mt-1">{item.name}</span>

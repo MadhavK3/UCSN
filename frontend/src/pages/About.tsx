@@ -1,14 +1,14 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { 
-  Target, 
-  Eye, 
-  Users, 
+import {
+  Target,
+  Eye,
+  Users,
   Award,
   ChevronDown
 } from 'lucide-react'
 
- //Import your team photos - RENAME YOUR IMAGE FILES TO MATCH THESE NAMES:
+//Import your team photos - RENAME YOUR IMAGE FILES TO MATCH THESE NAMES:
 import MadhavKhobare from "../assets/images/team/madhav-khobare.jpg";
 import OmBharambe from "../assets/images/team/om-bharambe.png";
 import SidhantMattoo from "../assets/images/team/sidhant-mattoo.png";
@@ -44,10 +44,10 @@ const About: React.FC = () => {
   ]
 
   const partners = [
-    { name: 'UN Environment Programme', logo: '/api/placeholder/120/60' },
-    { name: 'World Bank', logo: '/api/placeholder/120/60' },
-    { name: 'MIT Urban Planning', logo: '/api/placeholder/120/60' },
-    { name: 'Climate Resilience Fund', logo: '/api/placeholder/120/60' }
+    { name: 'Unknown', logo: '/api/placeholder/120/60' },
+    { name: 'Unknown', logo: '/api/placeholder/120/60' },
+    { name: 'Unknown', logo: '/api/placeholder/120/60' },
+    { name: 'Unknown', logo: '/api/placeholder/120/60' }
   ]
 
   const faqs = [
@@ -70,18 +70,18 @@ const About: React.FC = () => {
   ]
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 py-8">
+    <div className="min-h-screen bg-gray-50 dark:bg-[#050510] py-8 transition-colors duration-300">
       <div className="w-full px-4 sm:px-6 lg:px-8 py-8">
         {/* Hero Section */}
         <div className="text-center mb-16">
-          <motion.h1 
+          <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4"
           >
             About Urban Climate Shield Network (UCSN)
           </motion.h1>
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
@@ -93,13 +93,13 @@ const About: React.FC = () => {
 
         {/* Mission & Vision */}
         <div className="grid md:grid-cols-2 gap-8 mb-16">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg"
+            className="bg-white dark:bg-white/5 p-8 rounded-xl shadow-lg border border-gray-100 dark:border-white/10"
           >
-            <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center mb-4">
+            <div className="w-12 h-12 bg-blue-100 dark:bg-blue-500/20 rounded-lg flex items-center justify-center mb-4">
               <Target className="text-blue-600 dark:text-blue-400" size={24} />
             </div>
             <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
@@ -110,14 +110,14 @@ const About: React.FC = () => {
             </p>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg"
+            className="bg-white dark:bg-white/5 p-8 rounded-xl shadow-lg border border-gray-100 dark:border-white/10"
           >
-            <div className="w-12 h-12 bg-green-100 dark:bg-green-900/30 rounded-lg flex items-center justify-center mb-4">
+            <div className="w-12 h-12 bg-green-100 dark:bg-green-500/20 rounded-lg flex items-center justify-center mb-4">
               <Eye className="text-green-600 dark:text-green-400" size={24} />
             </div>
             <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
@@ -130,7 +130,7 @@ const About: React.FC = () => {
         </div>
 
         {/* Team Section */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -154,17 +154,17 @@ const About: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg text-center"
+                className="bg-white dark:bg-white/5 p-6 rounded-xl shadow-lg text-center border border-gray-100 dark:border-white/10"
               >
                 {/* Team Member Photo */}
-                <div className="w-20 h-20 rounded-full mx-auto mb-4 overflow-hidden border-4 border-gray-200 dark:border-gray-700">
-                  <img 
-                    src={member.image} 
+                <div className="w-20 h-20 rounded-full mx-auto mb-4 overflow-hidden border-4 border-gray-200 dark:border-white/10">
+                  <img
+                    src={member.image}
                     alt={member.name}
                     className="w-full h-full object-cover"
                   />
                 </div>
-                
+
                 <h3 className="font-semibold text-gray-900 dark:text-white mb-1">
                   {member.name}
                 </h3>
@@ -180,7 +180,7 @@ const About: React.FC = () => {
         </motion.div>
 
         {/* Partners Section */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -203,11 +203,11 @@ const About: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg flex items-center justify-center h-32"
+                className="bg-white dark:bg-white/5 p-6 rounded-xl shadow-lg flex items-center justify-center h-32 border border-gray-100 dark:border-white/10"
               >
                 <div className="text-center">
-                  <div className="w-16 h-16 bg-gray-300 dark:bg-gray-700 rounded-lg mx-auto mb-2 flex items-center justify-center">
-                    <Award className="text-gray-500" size={24} />
+                  <div className="w-16 h-16 bg-gray-100 dark:bg-white/10 rounded-lg mx-auto mb-2 flex items-center justify-center">
+                    <Award className="text-gray-500 dark:text-gray-400" size={24} />
                   </div>
                   <p className="text-sm text-gray-600 dark:text-gray-300">{partner.name}</p>
                 </div>
@@ -217,11 +217,11 @@ const About: React.FC = () => {
         </motion.div>
 
         {/* FAQ Section */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="bg-white dark:bg-gray-800 rounded-xl p-8 shadow-lg"
+          className="bg-white dark:bg-white/5 rounded-xl p-8 shadow-lg border border-gray-100 dark:border-white/10"
         >
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
@@ -240,7 +240,7 @@ const About: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="border-b border-gray-200 dark:border-gray-700 pb-4"
+                className="border-b border-gray-200 dark:border-white/10 pb-4"
               >
                 <button className="flex items-center justify-between w-full text-left py-4">
                   <h3 className="font-semibold text-gray-900 dark:text-white">

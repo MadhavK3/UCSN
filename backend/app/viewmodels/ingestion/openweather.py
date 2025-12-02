@@ -152,3 +152,22 @@ def reverse_geocode(lat: float, lon: float, api_key: str = None):
         return {"name": data[0].get("name") or data[0].get("local_names", {}).get("en") or "Unknown", "source": "openweathermap"}
     except Exception as e:
         return {"name": "Unknown", "error": str(e), "source": "fallback"}
+
+
+def fetch_forecast(city: str, api_key: str = None):
+    """Fetch 5-day/3-hour forecast from OpenWeather.
+    
+    Useful for determining trends (rising/falling temperature).
+    """
+    if not api_key:
+        return None
+
+    try:
+        url = f"http://api.openweathermap.org/data/2.5/forecast?q={city}&appid={api_key}"
+        resp = requests.get(url, timeout=5)
+        resp.raise_for_status()
+        data = resp.json()
+        data["source"] = "openweathermap"
+        return data
+    except Exception:
+        return None

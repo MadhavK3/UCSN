@@ -1,0 +1,85 @@
+{
+  "region": "Anand Vihar",
+  "road_network": {
+    "highways": [
+      {
+        "id": "highway_1",
+        "name": "NH-24",
+        "coordinates": [
+          {"lat": 28.6400, "lon": 77.3100},
+          {"lat": 28.6500, "lon": 77.3150},
+          {"lat": 28.6600, "lon": 77.3200}
+        ],
+        "lanes": 6,
+        "width_m": 30,
+        "traffic_flow_per_hour": 5000,
+        "emission_factor": 1.2
+      }
+    ],
+    "arterial_roads": [
+      {
+        "id": "arterial_1",
+        "name": "Anand Vihar Road",
+        "coordinates": [
+          {"lat": 28.6480, "lon": 77.3050},
+          {"lat": 28.6500, "lon": 77.3150},
+          {"lat": 28.6520, "lon": 77.3250}
+        ],
+        "lanes": 4,
+        "width_m": 20,
+        "traffic_flow_per_hour": 3000,
+        "emission_factor": 1.0
+      }
+    ],
+    "local_roads": [
+      {
+        "id": "local_1",
+        "name": "Local Access Road",
+        "coordinates": [
+          {"lat": 28.6450, "lon": 77.3120},
+          {"lat": 28.6500, "lon": 77.3150},
+          {"lat": 28.6550, "lon": 77.3180}
+        ],
+        "lanes": 2,
+        "width_m": 10,
+        "traffic_flow_per_hour": 1000,
+        "emission_factor": 0.8
+      }
+    ]
+  },
+  "traffic_patterns": {
+    "peak_hours": {
+      "morning": {"start": 8, "end": 10, "multiplier": 2.5},
+      "evening": {"start": 17, "end": 20, "multiplier": 2.5}
+    },
+    "off_peak_multiplier": 0.8,
+    "weekend_multiplier": 0.7
+  },
+  "emission_zones": [
+    {
+      "id": "emission_zone_isbt",
+      "name": "ISBT Traffic Emission Zone",
+      "coordinates": {"lat": 28.6506, "lon": 77.3153},
+      "radius_km": 0.5,
+      "base_emission_rate": 150.0,
+      "peak_multiplier": 2.5
+    },
+    {
+      "id": "emission_zone_railway",
+      "name": "Railway Station Emission Zone",
+      "coordinates": {"lat": 28.6512, "lon": 77.3145},
+      "radius_km": 0.3,
+      "base_emission_rate": 120.0,
+      "peak_multiplier": 2.0
+    },
+    {
+      "id": "emission_zone_industrial",
+      "name": "Industrial Emission Zone",
+      "coordinates": {"lat": 28.6520, "lon": 77.3170},
+      "radius_km": 0.8,
+      "base_emission_rate": 200.0,
+      "peak_multiplier": 1.2
+    }
+  ]
+}
+

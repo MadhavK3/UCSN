@@ -106,4 +106,3 @@ TWILIO_PHONE=your_twilio_phone_here
 - If ports are busy, stop other servers or change the port in `start.bat` and `vite.config.ts`.
 - For Linux/Mac, use the equivalent shell commands (see batch scripts for logic).
 
-"# UCSN" 

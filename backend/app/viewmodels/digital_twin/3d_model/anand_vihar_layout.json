@@ -1,0 +1,211 @@
+{
+  "region": "Anand Vihar",
+  "version": "1.0",
+  "coordinates": {
+    "center": {
+      "lat": 28.6506,
+      "lon": 77.3153
+    },
+    "bounds": {
+      "north": 28.6800,
+      "south": 28.6200,
+      "east": 77.3450,
+      "west": 77.2850
+    }
+  },
+  "landmarks": [
+    {
+      "id": "isbt",
+      "name": "Anand Vihar ISBT",
+      "type": "transport_hub",
+      "coordinates": {
+        "lat": 28.6506,
+        "lon": 77.3153
+      },
+      "height_m": 25,
+      "area_m2": 50000,
+      "description": "Inter State Bus Terminal"
+    },
+    {
+      "id": "railway_station",
+      "name": "Anand Vihar Railway Station",
+      "type": "transport_hub",
+      "coordinates": {
+        "lat": 28.6512,
+        "lon": 77.3145
+      },
+      "height_m": 20,
+      "area_m2": 30000,
+      "description": "Railway station with multiple platforms"
+    },
+    {
+      "id": "metro_station",
+      "name": "Anand Vihar Metro Station",
+      "type": "transport_hub",
+      "coordinates": {
+        "lat": 28.6500,
+        "lon": 77.3160
+      },
+      "height_m": 15,
+      "area_m2": 20000,
+      "description": "Metro station entrance and platforms"
+    },
+    {
+      "id": "industrial_zone",
+      "name": "Industrial Pockets",
+      "type": "industrial",
+      "coordinates": {
+        "lat": 28.6520,
+        "lon": 77.3170
+      },
+      "height_m": 10,
+      "area_m2": 120000,
+      "description": "Small-scale industrial units"
+    },
+    {
+      "id": "commercial_corridor",
+      "name": "Commercial Corridor",
+      "type": "commercial",
+      "coordinates": {
+        "lat": 28.6490,
+        "lon": 77.3150
+      },
+      "height_m": 30,
+      "area_m2": 80000,
+      "description": "High-rise commercial buildings"
+    }
+  ],
+  "roads": [
+    {
+      "id": "road_main",
+      "name": "Main Highway",
+      "type": "highway",
+      "coordinates": [
+        {
+          "lat": 28.6400,
+          "lon": 77.3100
+        },
+        {
+          "lat": 28.6500,
+          "lon": 77.3150
+        },
+        {
+          "lat": 28.6600,
+          "lon": 77.3200
+        }
+      ],
+      "width_m": 30,
+      "traffic_intensity": 0.95
+    },
+    {
+      "id": "road_secondary",
+      "name": "Secondary Road",
+      "type": "arterial",
+      "coordinates": [
+        {
+          "lat": 28.6480,
+          "lon": 77.3050
+        },
+        {
+          "lat": 28.6500,
+          "lon": 77.3150
+        },
+        {
+          "lat": 28.6520,
+          "lon": 77.3250
+        }
+      ],
+      "width_m": 20,
+      "traffic_intensity": 0.75
+    },
+    {
+      "id": "road_local",
+      "name": "Local Roads",
+      "type": "local",
+      "coordinates": [
+        {
+          "lat": 28.6450,
+          "lon": 77.3120
+        },
+        {
+          "lat": 28.6500,
+          "lon": 77.3150
+        },
+        {
+          "lat": 28.6550,
+          "lon": 77.3180
+        }
+      ],
+      "width_m": 10,
+      "traffic_intensity": 0.50
+    }
+  ],
+  "green_areas": [
+    {
+      "id": "green_patch_1",
+      "name": "Park Area",
+      "type": "park",
+      "coordinates": {
+        "lat": 28.6480,
+        "lon": 77.3130
+      },
+      "area_m2": 5000,
+      "tree_density": 0.6
+    },
+    {
+      "id": "green_patch_2",
+      "name": "Residential Green",
+      "type": "residential_green",
+      "coordinates": {
+        "lat": 28.6470,
+        "lon": 77.3120
+      },
+      "area_m2": 3000,
+      "tree_density": 0.4
+    }
+  ],
+  "pollution_hotspots": [
+    {
+      "id": "hotspot_isbt",
+      "zone": "zone_isbt",
+      "coordinates": {
+        "lat": 28.6506,
+        "lon": 77.3153
+      },
+      "intensity": 0.9,
+      "type": "traffic_emission"
+    },
+    {
+      "id": "hotspot_industrial",
+      "zone": "zone_industrial",
+      "coordinates": {
+        "lat": 28.6520,
+        "lon": 77.3170
+      },
+      "intensity": 0.85,
+      "type": "industrial_emission"
+    }
+  ],
+  "heat_island_zones": [
+    {
+      "id": "heat_zone_commercial",
+      "zone": "zone_commercial",
+      "coordinates": {
+        "lat": 28.6490,
+        "lon": 77.3150
+      },
+      "intensity": 0.8,
+      "temperature_offset_c": 4.0
+    },
+    {
+      "id": "heat_zone_isbt",
+      "zone": "zone_isbt",
+      "coordinates": {
+        "lat": 28.6506,
+        "lon": 77.3153
+      },
+      "intensity": 0.75,
+      "temperature_offset_c": 3.5
+    }
+  ]
+}

@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
-import { 
-  Mail, 
-  Phone, 
-  MapPin, 
-  Send, 
-  Linkedin, 
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Send,
+  Linkedin,
   Twitter,
   MessageCircle
 } from 'lucide-react'
@@ -24,7 +24,7 @@ const Contact: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
-    
+
     // Simulate API call
     setTimeout(() => {
       setIsSubmitting(false)
@@ -45,8 +45,8 @@ const Contact: React.FC = () => {
   }
 
   return (
-  <div className="min-h-screen bg-gray-50 dark:bg-gray-900 py-8">
-  <div className="w-full px-4 sm:px-6 lg:px-8 py-8">
+    <div className="min-h-screen bg-gray-50 dark:bg-[#050510] py-8 transition-colors duration-300">
+      <div className="w-full px-4 sm:px-6 lg:px-8 py-8">
         <div className="mb-12">
           <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
             Contact Us
@@ -58,10 +58,10 @@ const Contact: React.FC = () => {
 
         <div className="grid md:grid-cols-2 gap-8">
           {/* Contact Form */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="bg-white dark:bg-gray-800 rounded-xl p-8 shadow-lg"
+            className="bg-white dark:bg-white/5 rounded-xl p-8 shadow-lg border border-gray-100 dark:border-white/10"
           >
             <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
               <MessageCircle className="mr-2" size={24} />
@@ -80,7 +80,7 @@ const Contact: React.FC = () => {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-gray-100 dark:bg-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full px-4 py-3 bg-gray-100 dark:bg-white/10 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900 dark:text-white border border-transparent dark:border-white/10"
                   placeholder="Your full name"
                 />
               </div>
@@ -96,7 +96,7 @@ const Contact: React.FC = () => {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-gray-100 dark:bg-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full px-4 py-3 bg-gray-100 dark:bg-white/10 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900 dark:text-white border border-transparent dark:border-white/10"
                   placeholder="your.email@example.com"
                 />
               </div>
@@ -111,7 +111,7 @@ const Contact: React.FC = () => {
                   name="organization"
                   value={formData.organization}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 bg-gray-100 dark:bg-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full px-4 py-3 bg-gray-100 dark:bg-white/10 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900 dark:text-white border border-transparent dark:border-white/10"
                   placeholder="Your company or organization"
                 />
               </div>
@@ -127,7 +127,7 @@ const Contact: React.FC = () => {
                   onChange={handleChange}
                   required
                   rows={5}
-                  className="w-full px-4 py-3 bg-gray-100 dark:bg-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full px-4 py-3 bg-gray-100 dark:bg-white/10 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900 dark:text-white border border-transparent dark:border-white/10"
                   placeholder="How can we help you?"
                 />
               </div>
@@ -150,20 +150,20 @@ const Contact: React.FC = () => {
           </motion.div>
 
           {/* Contact Information */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
             className="space-y-6"
           >
-            <div className="bg-white dark:bg-gray-800 rounded-xl p-8 shadow-lg">
+            <div className="bg-white dark:bg-white/5 rounded-xl p-8 shadow-lg border border-gray-100 dark:border-white/10">
               <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
                 Get in Touch
               </h2>
 
               <div className="space-y-4">
                 <div className="flex items-start">
-                  <div className="w-10 h-10 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                  <div className="w-10 h-10 bg-blue-100 dark:bg-blue-500/20 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
                     <Mail className="text-blue-600 dark:text-blue-400" size={20} />
                   </div>
                   <div>
@@ -174,7 +174,7 @@ const Contact: React.FC = () => {
                 </div>
 
                 <div className="flex items-start">
-                  <div className="w-10 h-10 bg-green-100 dark:bg-green-900/30 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                  <div className="w-10 h-10 bg-green-100 dark:bg-green-500/20 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
                     <Phone className="text-green-600 dark:text-green-400" size={20} />
                   </div>
                   <div>
@@ -185,7 +185,7 @@ const Contact: React.FC = () => {
                 </div>
 
                 <div className="flex items-start">
-                  <div className="w-10 h-10 bg-purple-100 dark:bg-purple-900/30 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                  <div className="w-10 h-10 bg-purple-100 dark:bg-purple-500/20 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
                     <MapPin className="text-purple-600 dark:text-purple-400" size={20} />
                   </div>
                   <div>
@@ -199,7 +199,7 @@ const Contact: React.FC = () => {
             </div>
 
             {/* Social Media */}
-            <div className="bg-white dark:bg-gray-800 rounded-xl p-8 shadow-lg">
+            <div className="bg-white dark:bg-white/5 rounded-xl p-8 shadow-lg border border-gray-100 dark:border-white/10">
               <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
                 Follow Us
               </h2>
@@ -207,13 +207,13 @@ const Contact: React.FC = () => {
               <div className="flex space-x-4">
                 <a
                   href="#"
-                  className="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center hover:bg-blue-200 dark:hover:bg-blue-800/50 transition-colors"
+                  className="w-12 h-12 bg-blue-100 dark:bg-blue-500/20 rounded-lg flex items-center justify-center hover:bg-blue-200 dark:hover:bg-blue-500/30 transition-colors"
                 >
                   <Twitter className="text-blue-600 dark:text-blue-400" size={24} />
                 </a>
                 <a
                   href="#"
-                  className="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center hover:bg-blue-200 dark:hover:bg-blue-800/50 transition-colors"
+                  className="w-12 h-12 bg-blue-100 dark:bg-blue-500/20 rounded-lg flex items-center justify-center hover:bg-blue-200 dark:hover:bg-blue-500/30 transition-colors"
                 >
                   <Linkedin className="text-blue-600 dark:text-blue-400" size={24} />
                 </a>
@@ -221,7 +221,7 @@ const Contact: React.FC = () => {
             </div>
 
             {/* Response Time */}
-            <div className="bg-white dark:bg-gray-800 rounded-xl p-8 shadow-lg">
+            <div className="bg-white dark:bg-white/5 rounded-xl p-8 shadow-lg border border-gray-100 dark:border-white/10">
               <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
                 Response Time
               </h2>

@@ -1,0 +1,85 @@
+{
+  "region": "Anand Vihar",
+  "buildings": [
+    {
+      "id": "building_isbt_main",
+      "name": "ISBT Main Building",
+      "coordinates": {"lat": 28.6506, "lon": 77.3153},
+      "height_m": 25,
+      "floors": 5,
+      "type": "transport",
+      "roof_type": "flat",
+      "green_roof": false
+    },
+    {
+      "id": "building_railway_main",
+      "name": "Railway Station Main",
+      "coordinates": {"lat": 28.6512, "lon": 77.3145},
+      "height_m": 20,
+      "floors": 4,
+      "type": "transport",
+      "roof_type": "sloped",
+      "green_roof": false
+    },
+    {
+      "id": "building_commercial_1",
+      "name": "Commercial Tower 1",
+      "coordinates": {"lat": 28.6490, "lon": 77.3150},
+      "height_m": 60,
+      "floors": 15,
+      "type": "commercial",
+      "roof_type": "flat",
+      "green_roof": false,
+      "reflective_roof": false
+    },
+    {
+      "id": "building_commercial_2",
+      "name": "Commercial Tower 2",
+      "coordinates": {"lat": 28.6495, "lon": 77.3155},
+      "height_m": 45,
+      "floors": 12,
+      "type": "commercial",
+      "roof_type": "flat",
+      "green_roof": false,
+      "reflective_roof": false
+    },
+    {
+      "id": "building_residential_1",
+      "name": "Residential Complex 1",
+      "coordinates": {"lat": 28.6480, "lon": 77.3130},
+      "height_m": 30,
+      "floors": 8,
+      "type": "residential",
+      "roof_type": "flat",
+      "green_roof": false
+    },
+    {
+      "id": "building_industrial_1",
+      "name": "Industrial Unit 1",
+      "coordinates": {"lat": 28.6520, "lon": 77.3170},
+      "height_m": 10,
+      "floors": 2,
+      "type": "industrial",
+      "roof_type": "flat",
+      "green_roof": false
+    },
+    {
+      "id": "building_industrial_2",
+      "name": "Industrial Unit 2",
+      "coordinates": {"lat": 28.6525, "lon": 77.3175},
+      "height_m": 8,
+      "floors": 1,
+      "type": "industrial",
+      "roof_type": "flat",
+      "green_roof": false
+    }
+  ],
+  "statistics": {
+    "total_buildings": 7,
+    "average_height_m": 28.3,
+    "total_floor_area_m2": 250000,
+    "green_roof_coverage": 0.0,
+    "reflective_roof_coverage": 0.0
+  }
+}
+

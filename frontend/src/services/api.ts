@@ -33,11 +33,11 @@ export interface AnalyticsData {
   [key: string]: number | string
 }
 
-const BASE_URL = "http://127.0.0.1:8000";
+export const BASE_URL = "http://127.0.0.1:8000/api";
 
 export const api = {
-  async getUhiHeatmap(): Promise<HeatmapData[]> {
-    const res = await fetch(`${BASE_URL}/uhi-heatmap`);
+  async getUhiHeatmap(): Promise<any> {
+    const res = await fetch(`${BASE_URL}/uhimap`);
     if (!res.ok) throw new Error('Failed to fetch heatmap data');
     return await res.json();
   },
@@ -59,7 +59,7 @@ export const api = {
     return await res.json();
   },
 
-  async submitContact(form: {name: string; email: string; organization?: string; message: string}): Promise<void> {
+  async submitContact(form: { name: string; email: string; organization?: string; message: string }): Promise<void> {
     const res = await fetch(`${BASE_URL}/contact`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },

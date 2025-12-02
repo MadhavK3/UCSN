@@ -1,0 +1,18 @@
+{
+  "name": "severe_pollution_morning_peak",
+  "description": "Severe pollution during morning peak hours (8-10 AM)",
+  "conditions": {
+    "time": "08:00",
+    "traffic_multiplier": 2.5,
+    "industrial_emissions": 1.5,
+    "wind_speed": 2.0,
+    "base_aqi": 180,
+    "temperature": 32.0
+  },
+  "expected_impact": {
+    "aqi_range": [170, 200],
+    "temperature_range": [30, 35],
+    "traffic_intensity": "very_high"
+  }
+}
+

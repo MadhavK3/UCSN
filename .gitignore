@@ -7,7 +7,7 @@ __pycache__/
 venv/
 env/
 ENV/
-.env
+
 
 # Byte-compiled / optimized / DLL files
 *.so
@@ -31,7 +31,7 @@ eggs/
 coverage.xml
 
 # VS Code
-.vscode/
+
 
 # JetBrains
 .idea/
@@ -57,3 +57,6 @@ frontend/dist/
 # Misc
 *.sqlite3
 backend/test-report.pdf
+
+# Environment variables
+.env
