@@ -1,108 +1,180 @@
-# Indradhanu — Urban Climate Dashboard
+# Indradhanu — Urban Climate Resilience Dashboard
 
-## [Video demonstration](https://drive.google.com/file/d/11btz542bhI53api2aTgwOiA8NN5R5L0d/view?usp=sharing)
-
-## 🚀 Windows Quick Start
-
-1. **Setup:**
-	- Double-click or run `setup.bat` in the main directory.
-	- This will create a Python virtual environment, install backend and frontend dependencies.
-
-2. **Start:**
-  - Double-click or run `start.bat`.
-  - This will start the backend and frontend servers in separate background windows.
-
-No manual terminal management required—everything is handled by the batch scripts.
+## 🎥 Video Demonstration  
+[Watch Here]([https://drive.google.com/file/d/11btz542bhI53api2aTgwOiA8NN5R5L0d/view?usp=sharing](https://youtu.be/6tekVWPuZZ4?si=w0DG1i4IzHyDtIsc))
 
 ---
 
-## Project Overview
+## 📋 Overview
 
-Indradhanu is a full-stack demo for urban climate resilience, featuring:
-- React + Vite frontend (UI, charts, export button)
-- FastAPI backend (simulation logic, API endpoints)
-- Simulation (deterministic or fallback)
-- (PDF report generation is currently disabled)
+**Indradhanu** is a comprehensive full-stack platform designed to enhance urban climate resilience. It integrates a high-fidelity **Digital Twin** with an **AI/ML-powered backend** to simulate, monitor, and predict complex climate challenges.
 
-## Indradhanu Project
+City planners and administrators can visualize real-time data, forecast heat islands, air quality, flood risks, and energy patterns — all through an interactive 3D dashboard.
 
-### Overview
-A modular climate resilience platform with AI/ML backend (FastAPI) and interactive frontend (React).
+---
 
-### Setup Instructions
+## ✨ Key Features
 
-#### 1. Environment Variables
-All API keys and secrets are managed in a single `.env` file in the project root:
-```
-OPENWEATHER_API_KEY=your_openweather_api_key_here
+### 🏙️ 3D Digital Twin  
+Interactive Three.js-based replica of the city with:
+- Building footprints & heights  
+- Road networks  
+- Environmental data overlays  
+- Real-time activity flows  
+
+### 🤖 AI/ML Hub  
+- **Predictive Intelligence** for AQI, heatwaves, and flood risks  
+- **Anomaly Detection** for faulty or irregular sensor data  
+- **Carbon Tracker** for real-time carbon footprint analytics  
+
+### 🌡️ Simulation Engine  
+- Urban Heat Island simulations  
+- Traffic emissions & pollutant dispersion  
+- Coastal shielding & flood modeling  
+- Deterministic and AI-enhanced scenario generation  
+
+### 📢 Smart Alerting  
+Automated alerts via SMS and push notifications when environmental thresholds are crossed.
+
+### 📊 Interactive Analytics  
+Heatmaps, time-series plots, city overlays, and detailed drill-down analytics.
+
+### 🌍 Real-time Data Integration  
+Includes OpenWeatherMap, satellite data ingestion, and sensor-based updates.
+
+---
+
+## 🛠️ Tech Stack
+
+### **Frontend**
+- React (Vite)  
+- Tailwind CSS  
+- Three.js / @react-three/fiber  
+- Recharts  
+- Leaflet (React-Leaflet)  
+- Zustand (State Management)
+
+### **Backend**
+- FastAPI  
+- MongoDB  
+- Scikit-learn  
+- Google Gemini Agents  
+- OpenWeatherMap API  
+- Twilio SMS Integration  
+
+---
+
+## 🚀 Quick Start (Windows)
+
+### 1. Prerequisites  
+Install on your system:  
+- Python 3.8+  
+- Node.js (LTS)  
+- MongoDB (local service or cloud URI)
+
+---
+
+### 2. Configuration  
+Create a `.env` file inside:  
+`madhavk3/ucsn/UCSN-a829c5d2ba073a60ebc1886618291cb7bc8c8e35/`
+
+Add:
+
+```env
+OPENWEATHER_API_KEY=your_openweather_api_key
 MONGO_URI=mongodb://localhost:27017/
-TWILIO_ACCOUNT_SID=your_twilio_sid_here
-TWILIO_AUTH_TOKEN=your_twilio_auth_token_here
-TWILIO_PHONE=your_twilio_phone_here
-```
+TWILIO_ACCOUNT_SID=your_twilio_sid
+TWILIO_AUTH_TOKEN=your_twilio_auth_token
+TWILIO_PHONE=your_twilio_phone_number
+````
 
-#### 2. Install Dependencies
-Run the setup script:
-```
+---
+
+### 3. Installation
+
+Run the automated setup script:
+
+```bash
 setup.bat
 ```
-This installs Python and Node.js dependencies for backend and frontend.
 
-#### 3. Start Servers
-Run the start script:
-```
+This creates a virtual environment and installs backend + frontend dependencies.
+
+---
+
+### 4. Start Application
+
+Launch both backend and frontend simultaneously:
+
+```bash
 start.bat
 ```
-This launches both backend (FastAPI) and frontend (React) servers.
 
-- Backend: http://localhost:8000
-- Frontend: http://localhost:5173
+* **Frontend:** [http://localhost:5173](http://localhost:5173)
+* **Backend API:** [http://localhost:8000/docs](http://localhost:8000/docs)
 
-#### 4. Connecting Frontend to Backend
-The frontend communicates with the backend using these endpoints (examples):
-- `GET /uhi-heatmap` — returns UHI heatmap points
-- `POST /simulation` — run a climate simulation (JSON body)
-- `GET /analytics?metrics=...` — time series analytics
-- `POST /contact` — submit contact form
+---
 
-#### 5. Project Structure
+## 📂 Project Structure
+
 ```
 indradhanu/
-  .env
-  setup.bat
-  start.bat
-  README.md
-  backend/
-    ...
-  frontend/
-    ...
+├── backend/
+│   ├── app/
+│   │   ├── models/           # Database models
+│   │   ├── viewmodels/       # Business logic & simulation engines
+│   │   │   ├── ai/           # AI agents & recommendations
+│   │   │   ├── digital_twin/ # 3D models & scenario runners
+│   │   │   └── ml/           # ML models for forecasting & anomalies
+│   │   └── views/            # API routes
+│   ├── main.py               # FastAPI entry point
+│   └── requirements.txt      # Backend dependencies
+├── frontend/
+│   ├── src/
+│   │   ├── components/       # Charts, maps, 3D scenes
+│   │   ├── pages/            # Dashboard, simulation pages
+│   │   └── state/            # Zustand global state
+│   └── package.json          # Frontend dependencies
+├── .env                      # Environment variables
+├── setup.bat                 # One-click setup
+└── start.bat                 # One-click application runner
 ```
 
-#### 6. Notes
-- All sensitive keys are loaded from `.env` using `python-dotenv`.
-- Remove any `.env` files from subfolders; only use the root `.env`.
-- For Twilio/Firebase, add credentials to `.env` as needed.
-- For demo, simulated data flows are used; replace with real models/data as required.
+---
 
+## 🔧 Troubleshooting
 
+### Missing Modules
 
-## Simulation behavior
+Run `setup.bat` again to reinstall dependencies.
 
-- The backend can generate simulation results using built-in deterministic generators.
-- No external LLM or Gemini integration is required or used by default. If external simulation integrations are added later, they will be documented here and controlled via the project's `.env` file.
+### Port Conflicts
 
-**Sample .env file:**
+Ensure ports **8000** (Backend) and **5173** (Frontend) are free.
+
+### MongoDB Errors
+
+Confirm your MongoDB service is running or your cloud URI is correct.
+
+### Environment Variables
+
+Verify your `.env` file exists and contains valid keys.
+
+---
+
+## 📜 License
+
+Separate license files are provided for backend and frontend:
+
+* `licenses-backend.json`
+* `licenses-frontend.json`
+
+Please refer to them for detailed terms.
+
+---
+
 ```
-OPENWEATHER_API_KEY=your_openweather_api_key_here
-MONGO_URI=mongodb://localhost:27017/
-TWILIO_ACCOUNT_SID=your_twilio_sid_here
-TWILIO_AUTH_TOKEN=your_twilio_auth_token_here
-TWILIO_PHONE=your_twilio_phone_here
-```
 
-## Troubleshooting
+---
 
-- If you see errors about missing dependencies, rerun `setup.bat`.
-- If ports are busy, stop other servers or change the port in `start.bat` and `vite.config.ts`.
-- For Linux/Mac, use the equivalent shell commands (see batch scripts for logic).
 
