@@ -1,8 +1,7 @@
 # Indradhanu — Urban Climate Resilience Dashboard
 
 ## 🎥 Video Demonstration  
-[Watch Here]([https://drive.google.com/file/d/11btz542bhI53api2aTgwOiA8NN5R5L0d/view?usp=sharing](https://youtu.be/6tekVWPuZZ4?si=w0DG1i4IzHyDtIsc))
-
+[Watch Here](https://youtu.be/6tekVWPuZZ4?si=EDNUr8Edz0fPgNkP)
 ---
 
 ## 📋 Overview
